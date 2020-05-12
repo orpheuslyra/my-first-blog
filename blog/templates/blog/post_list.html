@@ -5,16 +5,15 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Django girls Blog</a></h1>
-        </div>
+            <h1><a href="/">Django Girls Blog</a></h1> 
+            {% for post in posts%}
+            <div>
+                <hr>
+                <h2><a href="">{{post.title}}</a></h2>
+                <p>{{post.text | linebreaksbr }}</p>
+                <p> 公開日 {{post.publish_date}}</p>
+            </div>
+            {% endfor %}
         <div>
-            <p>公開日 </p>
-            <h2><a href="">My first Blog</a></h2>
-        </div>
-        <div>
-            <p>公開日</p>
-            <h2><a href="">Second blog</a></h2>
-        </div>
-        <p>Hello world</p>
     </body>
 </html>
